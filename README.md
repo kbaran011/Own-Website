@@ -43,7 +43,6 @@ python3 -m http.server 8000
 ## File structure
 
 ```
-.
 ├── index.html      # All content and markup
 ├── styles.css      # Design system, layout, animations, dark mode
 ├── script.js       # Preloader, typing effect, counters, cursor, scroll logic
@@ -113,6 +112,13 @@ Follow the prompts. Custom domain available in the Vercel dashboard.
 
 ### Any static host (cPanel, S3, etc.)
 Upload all files (including `assets/` and `resume.pdf`) to the public root of your host.
+
+---
+
+## Tips for job applications
+
+- Keep project links up to date (GitHub repos or live demos) so recruiters can see your work.
+- When you update your CV, replace `resume.pdf` in this folder with the new file so the site always points to the latest version.
 
 ---
 
