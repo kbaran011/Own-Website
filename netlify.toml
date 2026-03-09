@@ -1,0 +1,10 @@
+# Netlify config for static portfolio
+[build]
+  publish = "."
+  # No build command needed — static site
+
+# Optional: redirects for SPA-style routing if you add more pages later
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200

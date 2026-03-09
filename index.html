@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kemal Baran Dursun — McGill CS & Economics. Quantitative analysis, risk modeling, and data-driven solutions. Open to internships and new grad roles.">
+  <title>Kemal Baran Dursun — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-box">
+      <span class="preloader-initials">KBD</span>
+      <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+    </div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#" class="logo">Kemal Baran Dursun</a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#work" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-blob blob-1"></div>
+        <div class="hero-blob blob-2"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-label reveal">
+            <span class="label-dot"></span>Available for internships &amp; new grad roles
+          </p>
+          <h1 class="hero-title reveal">
+            Hi, I'm <span class="highlight">Baran</span>.<br>
+            I build <span class="typed-wrapper"><span id="typed"></span><span class="typed-cursor" aria-hidden="true">|</span></span>
+          </h1>
+          <p class="hero-desc reveal">
+            McGill University — BA in Computer Science &amp; Economics (Dec 2026). CFA Level 1 Candidate &amp; FMVA. Focused on quantitative finance, risk analytics, and data-driven automation.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="#work" class="btn btn-primary">
+              View projects
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <div class="photo-ring">
+            <img src="assets/photo.png" alt="Kemal Baran Dursun" width="320" height="320">
+          </div>
+          <div class="photo-badge">
+            <span class="badge-dot"></span>
+            Open to work
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container section-inner">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">About me</p>
+          <h2 class="section-title">Turning data into decisions</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-content">
+            <p class="about-lead reveal">
+              I'm based in Montreal, studying Computer Science &amp; Economics at McGill. I care about rigorous analysis, clean data pipelines, and models that drive real decisions.
+            </p>
+            <p class="reveal">
+              My coursework spans Econometrics, Probability, Data Structures, Financial Instruments &amp; Institutions, and Economic Statistics. I've interned in invoicing &amp; collections at Duronm Textile and IT operations at Advanced Information Modeling, focusing on reporting, process improvement, and data accuracy.
+            </p>
+            <p class="reveal">
+              I'm fluent in English and Turkish, with intermediate French. Active in the McGill Consulting Association and the Economics Student Association.
+            </p>
+            <a href="#contact" class="link-arrow reveal">Let's talk →</a>
+          </div>
+          <div class="about-skills reveal">
+            <h3>Skills &amp; tools</h3>
+            <div class="skills-grid">
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">Pandas</span>
+              <span class="skill-badge">NumPy</span>
+              <span class="skill-badge">SQL</span>
+              <span class="skill-badge">PostgreSQL</span>
+              <span class="skill-badge">Excel</span>
+              <span class="skill-badge">Power BI</span>
+              <span class="skill-badge">Statistical Analysis</span>
+              <span class="skill-badge">VaR &amp; Stress Testing</span>
+              <span class="skill-badge">Quant Modelling</span>
+              <span class="skill-badge">Data Pipelines</span>
+              <span class="skill-badge">Microsoft Office</span>
+            </div>
+            <div class="about-certs">
+              <div class="cert-item">
+                <span class="cert-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </span>
+                <span>CFA Level 1 Candidate</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </span>
+                <span>FMVA — Financial Modeling &amp; Valuation Analyst</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience" id="experience">
+      <div class="container section-inner">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Career</p>
+          <h2 class="section-title">Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Invoicing and Collections Intern</h3>
+                  <p class="timeline-company">Duronm Textile Company</p>
+                </div>
+                <span class="timeline-period">Jun – Aug 2023</span>
+              </div>
+              <p class="timeline-location">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Izmir, Turkey
+              </p>
+              <ul class="exp-bullets">
+                <li>Analyzed 200+ accounts receivable transactions to identify payment trends, delays, and cash-flow risk exposure.</li>
+                <li>Built weekly Excel reports tracking overdue balances, collection performance, and working capital indicators for management review.</li>
+                <li>Supported reconciliation of invoicing and payment records, improving data accuracy and reporting reliability.</li>
+                <li>Flagged high-risk accounts and payment anomalies for follow-up, supporting improved collection prioritization.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Excel</span><span>Data Analysis</span><span>Reporting</span><span>Finance</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Summer IT Intern</h3>
+                  <p class="timeline-company">Advanced Information Modeling Inc</p>
+                </div>
+                <span class="timeline-period">Jun – Aug 2024</span>
+              </div>
+              <p class="timeline-location">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                St. Petersburg, FL (Remote)
+              </p>
+              <ul class="exp-bullets">
+                <li>Supported internal IT operations by monitoring system availability, performance logs, and operational metrics.</li>
+                <li>Analyzed internal workflows and documented recurring technical issues, contributing to process improvement recommendations.</li>
+                <li>Assisted with technology-enabled process improvements by updating internal documentation and supporting standard operating procedures.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>IT Operations</span><span>Documentation</span><span>Process Improvement</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="work" id="work">
+      <div class="container section-inner">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Portfolio</p>
+          <h2 class="section-title">Selected projects</h2>
+          <p class="section-desc">All repos on <a href="https://github.com/kbaran011" target="_blank" rel="noopener" class="link-arrow">GitHub →</a></p>
+        </div>
+        <div class="work-grid">
+          <a href="https://github.com/kbaran011/Quantitative_Portfolio_Optimization_-_Risk-Engine" class="work-card reveal" target="_blank" rel="noopener">
+            <div class="work-card-top">
+              <span class="work-number">01</span>
+              <span class="work-card-arrow">→</span>
+            </div>
+            <h3>Quantitative Portfolio Optimization &amp; Risk Engine</h3>
+            <p>Stochastic portfolio optimization using Modern Portfolio Theory and 10,000+ Monte Carlo simulations. Multivariate return simulation via Cholesky decomposition; Parametric VaR and Expected Shortfall (95% &amp; 99%).</p>
+            <div class="work-tags">
+              <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+            </div>
+          </a>
+
+          <a href="https://auditap.it.com/#how-it-works" class="work-card work-card-featured reveal" target="_blank" rel="noopener">
+            <div class="work-card-top">
+              <span class="work-number">02</span>
+              <span class="work-badge-live">Live</span>
+              <span class="work-card-arrow">→</span>
+            </div>
+            <h3>AI-Powered Financial Risk &amp; Anomaly Detector (AuditAP)</h3>
+            <p>Automated Accounts Payable monitoring to detect duplicate invoices, vendor price creeping, and zombie subscriptions. QuickBooks integration, 90-day rolling baselines, anomaly flagging with LLMs.</p>
+            <div class="work-tags">
+              <span>Python</span><span>SQL</span><span>PostgreSQL</span><span>LLMs</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/kbaran011/Global-Layoffs-Data-Cleaning-Exploratory-Analysis" class="work-card reveal" target="_blank" rel="noopener">
+            <div class="work-card-top">
+              <span class="work-number">03</span>
+              <span class="work-card-arrow">→</span>
+            </div>
+            <h3>Global Layoffs — Data Cleaning &amp; Exploratory Analysis</h3>
+            <p>End-to-end data pipeline cleaning and analyzing a real-world layoffs dataset covering major workforce reductions from 2020 to 2023. Quality checks and exploratory analysis to surface trends.</p>
+            <div class="work-tags">
+              <span>SQL</span><span>Data Cleaning</span><span>EDA</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/kbaran011/Expense_Tracker_App" class="work-card reveal" target="_blank" rel="noopener">
+            <div class="work-card-top">
+              <span class="work-number">04</span>
+              <span class="work-card-arrow">→</span>
+            </div>
+            <h3>Expense Tracker App</h3>
+            <p>Personal finance app for tracking expenses, categorizing spending, and managing budgets with a clean CLI interface and data persistence.</p>
+            <div class="work-tags">
+              <span>Python</span><span>Finance</span><span>CLI</span>
+            </div>
+          </a>
+        </div>
+        <p class="work-more reveal">
+          <a href="https://github.com/kbaran011" target="_blank" rel="noopener" class="btn btn-secondary">
+            More on GitHub →
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="container section-inner">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Contact</p>
+          <h2 class="section-title">Let's connect</h2>
+          <p class="contact-lead">Interested in working together or just want to say hi? I'm happy to hear from you.</p>
+        </div>
+        <div class="contact-grid">
+          <a href="mailto:kemalbarandursun@gmail.com" class="contact-card reveal">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="contact-card-label">Email</p>
+              <p class="contact-card-value">kemalbarandursun@gmail.com</p>
+            </div>
+          </a>
+          <a href="tel:+14384704570" class="contact-card reveal">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.13 1.22 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.9a16 16 0 006.19 6.19l1.26-1.26a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="contact-card-label">Phone</p>
+              <p class="contact-card-value">438-470-4570</p>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/kemalbarandursun/" target="_blank" rel="noopener" class="contact-card reveal">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <p class="contact-card-label">LinkedIn</p>
+              <p class="contact-card-value">kemalbarandursun</p>
+            </div>
+          </a>
+          <a href="https://github.com/kbaran011" target="_blank" rel="noopener" class="contact-card reveal">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            </div>
+            <div>
+              <p class="contact-card-label">GitHub</p>
+              <p class="contact-card-value">kbaran011</p>
+            </div>
+          </a>
+        </div>
+        <div class="contact-resume reveal">
+          <a href="resume.pdf" class="btn btn-primary" download>
+            Download Resume
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Kemal Baran Dursun. Built with care.</p>
+      <div class="footer-links">
+        <a href="https://github.com/kbaran011" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/kemalbarandursun/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
