@@ -1,39 +1,127 @@
-# Kemal Baran Dursun — Portfolio
+# Kemal Baran Dursun — Personal Portfolio
 
-A one-page portfolio site for job applications and professional presence. Content is filled from your CV. Static HTML/CSS/JS, no build step — easy to host on any domain.
+A modern, fully static personal portfolio site. No frameworks, no build step — pure HTML, CSS, and vanilla JS.
 
-## Quick start
+**Live features:**
+- Dark / light mode (persisted via `localStorage`)
+- Typing animation cycling through roles in the hero
+- Scroll-triggered reveal animations on every section
+- Animated stat counters (projects, internships, certifications)
+- Custom cursor with trailing follower (desktop only)
+- Preloader with initials + progress bar
+- Scroll progress bar at the top of the page
+- Active nav link tracking based on scroll position
+- Vertical timeline for experience
+- Project card grid with hover effects
+- Responsive mobile nav with hamburger → X animation
 
-1. Open `index.html` in a browser, or run a local server:
-   ```bash
-   npx serve .
-   ```
-   Then visit `http://localhost:3000`.
+---
 
-2. **Optional tweaks** in `index.html`:
-   - **Contact**: Update LinkedIn and GitHub URLs to your real profile links (e.g. `linkedin.com/in/yourusername`, `github.com/yourusername`).
-   - **Projects**: Add `href` links to your project repos or demos (replace `#` on the two project cards).
+## Getting started
 
-3. Optional: tweak colors and fonts in `styles.css` (see `:root` at the top).
+No install required. Open directly in a browser:
 
-## Deploying to your domain
+```bash
+open index.html
+```
 
-- **Netlify / Vercel**: Drag the project folder into the dashboard, or connect your Git repo. Set your custom domain in site settings.
-- **GitHub Pages**: Push to a repo, enable Pages in Settings → Pages, choose “Deploy from branch” (e.g. `main` / `root`). Use a custom domain in the same settings.
-- **Any static host**: Upload the contents of this folder (including `resume.pdf`) to your web host’s public directory and point your domain there.
+Or run a local dev server for proper asset loading:
+
+```bash
+npx serve .
+# → http://localhost:3000
+```
+
+```bash
+# Alternative with Python
+python3 -m http.server 8000
+# → http://localhost:8000
+```
+
+---
 
 ## File structure
 
 ```
 .
-├── index.html   # All content and structure
-├── styles.css   # Layout and design
-├── script.js   # Nav toggle, footer year
-├── resume.pdf  # Your CV (included)
-└── README.md   # This file
+├── index.html      # All content and markup
+├── styles.css      # Design system, layout, animations, dark mode
+├── script.js       # Preloader, typing effect, counters, cursor, scroll logic
+├── resume.pdf      # CV — linked from the contact section
+├── assets/
+│   └── photo.png   # Profile photo (used in hero)
+└── README.md
 ```
 
-## Tips for job applications
+---
 
-- Keep project links up to date (GitHub repos or live demos) so recruiters can see your work.
-- When you update your CV, replace `resume.pdf` in this folder with the new file so the site always points to the latest version.
+## Customization
+
+### Colors & fonts
+All design tokens are in `styles.css` under `:root`. The main accent color is green (`--accent`). To change the palette, update only these variables — nothing else needs to change.
+
+```css
+:root {
+  --accent:       rgb(22, 125, 19);
+  --accent-hover: rgb(18, 105, 15);
+  --accent-soft:  rgba(22, 125, 19, 0.10);
+  /* ... */
+}
+```
+
+### Typing phrases
+Edit the `phrases` array in `script.js`:
+
+```js
+var phrases = [
+  "quantitative tools.",
+  "data pipelines.",
+  "risk models.",
+  "financial analytics."
+];
+```
+
+### Content
+All text content is in `index.html`. Sections in order: Hero → About → Experience → Projects → Contact. Each section is a `<section>` tag with a matching `id`.
+
+### Resume
+Replace `resume.pdf` in the root folder. The download button in the contact section points to it automatically.
+
+### Profile photo
+Replace `assets/photo.png`. The image is displayed at 300 × 300 px in a circular crop — square source images work best.
+
+---
+
+## Deployment
+
+### GitHub Pages
+1. Push this repo to GitHub.
+2. Go to **Settings → Pages**.
+3. Set source to `Deploy from a branch` → `main` / `root`.
+4. (Optional) Add a custom domain under the **Custom domain** field.
+
+### Netlify
+1. Drag the project folder into [app.netlify.com](https://app.netlify.com) — done.
+2. Or connect the GitHub repo for automatic deploys on push.
+3. Set your custom domain in **Site settings → Domain management**.
+
+### Vercel
+```bash
+npx vercel
+```
+Follow the prompts. Custom domain available in the Vercel dashboard.
+
+### Any static host (cPanel, S3, etc.)
+Upload all files (including `assets/` and `resume.pdf`) to the public root of your host.
+
+---
+
+## Browser support
+
+Works in all modern browsers (Chrome, Firefox, Safari, Edge). The custom cursor is automatically hidden on touch/pointer-coarse devices.
+
+---
+
+## License
+
+Personal use. Not intended for redistribution as a template.
