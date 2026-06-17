@@ -93,10 +93,10 @@
   // ─── Typing effect ────────────────────────────────────────────────────────────
   var typedEl = document.getElementById("typed");
   var phrases = [
-    "quantitative tools.",
+    "data analytics.",
     "data pipelines.",
-    "risk models.",
-    "financial analytics."
+    "forecasting models.",
+    "consulting solutions."
   ];
   var phraseIdx = 0, charIdx = 0, deleting = false, typeDelay = 110;
 
