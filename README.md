@@ -73,10 +73,10 @@ Edit the `phrases` array in `script.js`:
 
 ```js
 var phrases = [
-  "quantitative tools.",
-  "data pipelines.",
-  "risk models.",
-  "financial analytics."
+  "decisions.",
+  "forecasts.",
+  "products.",
+  "strategy."
 ];
 ```
 
