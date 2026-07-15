@@ -93,25 +93,17 @@ Replace `assets/photo.png`. The image is displayed at 300 × 300 px in a circula
 
 ## Deployment
 
-### GitHub Pages
-1. Push this repo to GitHub.
-2. Go to **Settings → Pages**.
-3. Set source to `Deploy from a branch` → `main` / `root`.
-4. (Optional) Add a custom domain under the **Custom domain** field.
+Deployed on [Railway](https://railway.com). The service is connected to this GitHub repo — every push to `main` triggers a redeploy.
 
-### Netlify
-1. Drag the project folder into [app.netlify.com](https://app.netlify.com) — done.
-2. Or connect the GitHub repo for automatic deploys on push.
-3. Set your custom domain in **Site settings → Domain management**.
+`railway.json` selects the Railpack builder, which detects the root `index.html` and serves the site as static files (via Caddy). No build command needed.
 
-### Vercel
+To deploy the local working tree directly without pushing:
+
 ```bash
-npx vercel
+railway up
 ```
-Follow the prompts. Custom domain available in the Vercel dashboard.
 
-### Any static host (cPanel, S3, etc.)
-Upload all files (including `assets/` and `resume.pdf`) to the public root of your host.
+Custom domains are managed in the Railway dashboard under **Service → Settings → Networking**.
 
 ---
 
