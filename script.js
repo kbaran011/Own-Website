@@ -31,7 +31,8 @@
   // ─── Dark mode ────────────────────────────────────────────────────────────────
   var html = document.documentElement;
   var themeToggle = document.getElementById("themeToggle");
-  var savedTheme = localStorage.getItem("kbdTheme") || "light";
+  var savedTheme = localStorage.getItem("kbdTheme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   html.setAttribute("data-theme", savedTheme);
 
   if (themeToggle) {

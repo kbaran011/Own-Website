@@ -6,6 +6,15 @@
   <meta name="description" content="Baran Dursun — Software engineer who ships data-heavy products with a finance edge. McGill CS & Economics '26. An App Store app and three live data products. Open to internships and new grad roles.">
   <link rel="canonical" href="https://kemalbarandursun.com/">
   <title>Baran Dursun — Software Engineer</title>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("kbdTheme") ||
+          (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- Open Graph -->
   <meta property="og:title" content="Baran Dursun — Software Engineer">
@@ -279,7 +288,7 @@
                 <span>React Native</span><span>Expo</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span>
               </div>
               <div class="case-links">
-                <a href="https://fragmance.app/" class="case-link case-link-primary" target="_blank" rel="noopener">View on App Store →</a>
+                <a href="https://apps.apple.com/app/id6775969323" class="case-link case-link-primary" target="_blank" rel="noopener">View on App Store →</a>
                 <a href="https://github.com/kbaran011/fragmance-showcase" class="case-link" target="_blank" rel="noopener">Showcase repo (app source private)</a>
               </div>
             </div>
@@ -489,7 +498,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Baran Dursun. Built with care.</p>
+      <p>© <span id="year"></span> Baran Dursun</p>
       <div class="footer-links">
         <a href="https://github.com/kbaran011" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/kemalbarandursun/" target="_blank" rel="noopener">LinkedIn</a>
