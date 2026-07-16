@@ -3,34 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kemal Baran Dursun — McGill CS & Economics. Data analytics, data science, and tech consulting. Open to internships and new grad roles.">
-  <title>Kemal Baran Dursun — Portfolio</title>
+  <meta name="description" content="Baran Dursun — Software engineer who ships data-heavy products with a finance edge. McGill CS & Economics '26. An App Store app and three live data products. Open to internships and new grad roles.">
+  <link rel="canonical" href="https://kemalbarandursun.com/">
+  <title>Baran Dursun — Software Engineer</title>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("kbdTheme") ||
+          (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Baran Dursun — Software Engineer">
+  <meta property="og:description" content="Software engineer who ships data-heavy products with a finance edge. McGill CS & Economics '26 — an App Store app and three live data products.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kemalbarandursun.com/">
+  <meta property="og:site_name" content="Baran Dursun">
+  <meta property="og:image" content="https://kemalbarandursun.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Baran Dursun — Software engineer who builds and ships data-heavy products">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Baran Dursun — Software Engineer">
+  <meta name="twitter:description" content="Software engineer who ships data-heavy products with a finance edge. McGill CS & Economics '26 — an App Store app and three live data products.">
+  <meta name="twitter:image" content="https://kemalbarandursun.com/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Baran Dursun — Software engineer who builds and ships data-heavy products">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Baran Dursun",
+    "alternateName": "Kemal Baran Dursun",
+    "url": "https://kemalbarandursun.com/",
+    "jobTitle": "Software Engineer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "McGill University"
+    },
+    "sameAs": [
+      "https://github.com/kbaran011",
+      "https://www.linkedin.com/in/kemalbarandursun/"
+    ],
+    "email": "mailto:kemalbarandursun@gmail.com"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23167d13' rx='6'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23167d13' rx='6'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-
-  <!-- Preloader -->
-  <div class="preloader" id="preloader">
-    <div class="preloader-box">
-      <span class="preloader-initials">KBD</span>
-      <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
-    </div>
-  </div>
 
   <!-- Scroll progress -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Custom cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="#" class="logo">Kemal Baran Dursun</a>
+      <a href="#" class="logo">Baran Dursun</a>
       <nav class="nav" aria-label="Main">
         <ul class="nav-list">
           <li><a href="#about" class="nav-link">About</a></li>
@@ -67,10 +104,10 @@
           </p>
           <h1 class="hero-title reveal">
             I'm <span class="highlight">Baran Dursun</span>.<br>
-            I turn data into <span class="typed-wrapper"><span id="typed"></span><span class="typed-cursor" aria-hidden="true">|</span></span>
+            I build and ship <span class="highlight">data-heavy products</span>.
           </h1>
           <p class="hero-desc reveal">
-            McGill University — BA in Computer Science &amp; Economics (Dec 2026). FMVA. Focused on data analytics, data science, and tech consulting.
+            McGill CS &amp; Economics '26. I ship full-stack products end to end — an App Store app and three live data platforms — with a finance edge (FMVA, CFA Level 1 candidate).
           </p>
           <div class="hero-cta reveal">
             <a href="#work" class="btn btn-primary">
@@ -82,7 +119,7 @@
         </div>
         <div class="hero-photo reveal">
           <div class="photo-ring">
-            <img src="assets/photo.png" alt="Kemal Baran Dursun" width="320" height="320">
+            <img src="assets/photo.jpg" alt="Baran Dursun" width="640" height="426">
           </div>
           <div class="photo-badge">
             <span class="badge-dot"></span>
@@ -101,15 +138,15 @@
       <div class="container section-inner">
         <div class="section-header reveal">
           <p class="section-eyebrow">About me</p>
-          <h2 class="section-title">Turning data into decisions</h2>
+          <h2 class="section-title">I build products, not just prototypes</h2>
         </div>
         <div class="about-grid">
           <div class="about-content">
             <p class="about-lead reveal">
-              I'm based in Montreal, studying Computer Science &amp; Economics at McGill. I care about rigorous analysis, clean data pipelines, and models that drive real decisions.
+              I'm a software engineer in Montreal studying CS &amp; Economics at McGill (graduating Dec 2026). I build full-stack, data-heavy products and take them all the way to production — an iOS app live on the App Store and three deployed data platforms, from ingestion pipelines to the interfaces on top of them.
             </p>
             <p class="reveal">
-              My coursework spans Econometrics, Probability, Data Structures, Financial Instruments &amp; Institutions, and Economic Statistics. I've interned in invoicing &amp; collections at Duronm Textile and IT operations at Advanced Information Modeling, focusing on reporting, process improvement, and data accuracy.
+              My edge is the economics half of the degree: I'm comfortable with the finance and quantitative modeling behind the data, not just the plumbing. I'm an FMVA and a CFA Level 1 candidate, and my coursework spans Econometrics, Probability, Data Structures, and Financial Instruments &amp; Institutions. Earlier, I interned in invoicing &amp; collections at Duronm Textile and IT operations at Advanced Information Modeling.
             </p>
             <p class="reveal">
               I'm fluent in English and Turkish, with intermediate French. Active in the McGill Consulting Association and the Economics Student Association.
@@ -120,17 +157,15 @@
             <h3>Skills &amp; tools</h3>
             <div class="skills-grid">
               <span class="skill-badge">Python</span>
-              <span class="skill-badge">Pandas</span>
-              <span class="skill-badge">NumPy</span>
-              <span class="skill-badge">SQL</span>
-              <span class="skill-badge">PostgreSQL</span>
-              <span class="skill-badge">Excel</span>
-              <span class="skill-badge">Power BI</span>
-              <span class="skill-badge">Statistical Analysis</span>
-              <span class="skill-badge">React</span>
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">React / React Native</span>
               <span class="skill-badge">Node.js</span>
-              <span class="skill-badge">Data Pipelines</span>
-              <span class="skill-badge">Microsoft Office</span>
+              <span class="skill-badge">SQL / PostgreSQL</span>
+              <span class="skill-badge">FastAPI</span>
+              <span class="skill-badge">Next.js</span>
+              <span class="skill-badge">Pandas / NumPy</span>
+              <span class="skill-badge">Power BI</span>
+              <span class="skill-badge">Excel</span>
             </div>
             <div class="about-certs">
               <div class="cert-item">
@@ -138,6 +173,12 @@
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 </span>
                 <span>FMVA — Financial Modeling &amp; Valuation Analyst</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </span>
+                <span>CFA Level 1 Candidate</span>
               </div>
             </div>
           </div>
@@ -219,59 +260,141 @@
           <h2 class="section-title">Selected projects</h2>
           <p class="section-desc">All repos on <a href="https://github.com/kbaran011" target="_blank" rel="noopener" class="link-arrow">GitHub →</a></p>
         </div>
+        <div class="case-grid">
+          <article class="case-card reveal">
+            <div class="case-shot">
+              <img src="assets/shots/fragmance.jpg" loading="lazy" width="1200" height="750" alt="FragMance mobile app screenshot showing the fragrance discovery interface">
+              <span class="case-badge">App Store</span>
+              <span class="case-number">01</span>
+            </div>
+            <div class="case-body">
+              <h3>FragMance</h3>
+              <p class="case-tagline">A mobile fragrance discovery and collection platform, live on the App Store.</p>
+              <div class="case-sections">
+                <div class="case-block">
+                  <span class="case-label">Problem</span>
+                  <p>Fragrance enthusiasts track their collections across scattered notes and spreadsheets, with no single place to identify a bottle, log what they wear, or see what friends are wearing.</p>
+                </div>
+                <div class="case-block">
+                  <span class="case-label">Build</span>
+                  <p>A React Native + Expo app on a Node.js / PostgreSQL backend, built over a database of 70,000+ fragrances with full note pyramids. The hardest piece was a 4-stage barcode scanning pipeline that reliably resolves a physical bottle to the right entry.</p>
+                </div>
+                <div class="case-block">
+                  <span class="case-label">Status</span>
+                  <p>Live on the App Store, with a digital wardrobe, Scent-of-the-Day logging, and a social feed with friends and streaks. Also ships B2B analytics endpoints designed for fragrance houses.</p>
+                </div>
+              </div>
+              <div class="work-tags">
+                <span>React Native</span><span>Expo</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span>
+              </div>
+              <div class="case-links">
+                <a href="https://apps.apple.com/app/id6775969323" class="case-link case-link-primary" target="_blank" rel="noopener">View on App Store →</a>
+                <a href="https://github.com/kbaran011/fragmance-showcase" class="case-link" target="_blank" rel="noopener">Showcase repo (app source private)</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-shot">
+              <img src="assets/shots/econsight.jpg" loading="lazy" width="1200" height="750" alt="EconSight dashboard showing Canadian macro indicators and forecasts">
+              <span class="case-badge">Live</span>
+              <span class="case-number">02</span>
+            </div>
+            <div class="case-body">
+              <h3>EconSight</h3>
+              <p class="case-tagline">A Canadian macro-intelligence platform with forecasting and natural-language Q&amp;A.</p>
+              <div class="case-sections">
+                <div class="case-block">
+                  <span class="case-label">Problem</span>
+                  <p>Canadian macro data is scattered across Statistics Canada and the Bank of Canada in incompatible formats, making it slow to combine indicators or reason about scenarios.</p>
+                </div>
+                <div class="case-block">
+                  <span class="case-label">Build</span>
+                  <p>Ingests 9 indicators into a PostgreSQL medallion (bronze / silver / gold) warehouse, then runs VAR + XGBoost forecasting with Monte Carlo scenario bands behind a FastAPI + React dashboard. The interesting part was layering RAG natural-language Q&amp;A over the same warehouse the numeric models read from.</p>
+                </div>
+                <div class="case-block">
+                  <span class="case-label">Status</span>
+                  <p>Live, serving a composite health score, scenario forecasts, natural-language Q&amp;A, and one-click PDF reports.</p>
+                </div>
+              </div>
+              <div class="work-tags">
+                <span>Python</span><span>FastAPI</span><span>XGBoost</span><span>PostgreSQL</span><span>React</span><span>RAG</span>
+              </div>
+              <div class="case-links">
+                <a href="https://frontend-production-f45a3.up.railway.app" class="case-link case-link-primary" target="_blank" rel="noopener">Open live app →</a>
+                <a href="https://github.com/kbaran011/EconSight" class="case-link" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-shot">
+              <img src="assets/shots/newspaper.jpg" loading="lazy" width="1100" height="688" alt="Personalized Newspaper rendered as a dense three-column broadsheet">
+              <span class="case-badge">Live</span>
+              <span class="case-number">03</span>
+            </div>
+            <div class="case-body">
+              <h3>Personalized Newspaper</h3>
+              <p class="case-tagline">An AI-curated daily broadsheet, rebuilt on a schedule.</p>
+              <div class="case-sections">
+                <div class="case-block">
+                  <span class="case-label">Problem</span>
+                  <p>Feeds and news sites optimize for engagement, burying the signal under clickbait and the same story duplicated across sources.</p>
+                </div>
+                <div class="case-block">
+                  <span class="case-label">Build</span>
+                  <p>A scheduled pipeline polls Finnhub, RSS feeds, and Hacker News, scores every article for relevance and clickbait with the Claude API, and renders a dense three-column broadsheet from Postgres. The whole thing runs as a single Railway service.</p>
+                </div>
+                <div class="case-block">
+                  <span class="case-label">Status</span>
+                  <p>Live on Railway, regenerating the front page on a schedule.</p>
+                </div>
+              </div>
+              <div class="work-tags">
+                <span>Next.js</span><span>TypeScript</span><span>Drizzle</span><span>PostgreSQL</span><span>Claude API</span><span>Tailwind</span>
+              </div>
+              <div class="case-links">
+                <a href="https://web-production-ccca1.up.railway.app/" class="case-link case-link-primary" target="_blank" rel="noopener">Open live app →</a>
+                <a href="https://github.com/kbaran011/personalized-newspaper" class="case-link" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-shot">
+              <img src="assets/shots/auditap.jpg" loading="lazy" width="1200" height="750" alt="AuditAP accounts-payable monitoring dashboard flagging invoice anomalies">
+              <span class="case-badge">Live</span>
+              <span class="case-number">04</span>
+            </div>
+            <div class="case-body">
+              <h3>AuditAP</h3>
+              <p class="case-tagline">Accounts-payable anomaly monitoring for small finance teams.</p>
+              <div class="case-sections">
+                <div class="case-block">
+                  <span class="case-label">Problem</span>
+                  <p>Duplicate invoices, creeping vendor prices, and forgotten "zombie" subscriptions quietly drain accounts payable and rarely get caught by hand.</p>
+                </div>
+                <div class="case-block">
+                  <span class="case-label">Build</span>
+                  <p>Integrates with QuickBooks and builds 90-day rolling statistical baselines per vendor to flag duplicate invoices, vendor price creep, and zombie subscriptions, with an LLM pass auditing individual invoice line items.</p>
+                </div>
+                <div class="case-block">
+                  <span class="case-label">Status</span>
+                  <p>Live at auditap.it.com.</p>
+                </div>
+              </div>
+              <div class="work-tags">
+                <span>Python</span><span>SQL</span><span>PostgreSQL</span><span>LLMs</span>
+              </div>
+              <div class="case-links">
+                <a href="https://auditap.it.com/" class="case-link case-link-primary" target="_blank" rel="noopener">Open live app →</a>
+                <a href="https://github.com/kbaran011/auditap" class="case-link" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
         <div class="work-grid">
-          <a href="https://fragmance.app/" class="work-card work-card-featured reveal" target="_blank" rel="noopener">
-            <div class="work-card-top">
-              <span class="work-number">01</span>
-              <span class="work-badge-live">App Store</span>
-              <span class="work-card-arrow">→</span>
-            </div>
-            <h3>FragMance — Mobile Fragrance Platform</h3>
-            <p>Fragrance discovery and collection app, live on the App Store. Scan any bottle via a 4-stage barcode pipeline, build your digital wardrobe, log your Scent of the Day, and follow friends. 70,000+ fragrances with full note breakdowns, social feed, streak tracking, and B2B analytics endpoints sold to fragrance houses.</p>
-            <div class="work-tags">
-              <span>React Native</span><span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Expo</span>
-            </div>
-          </a>
-
-          <a href="https://frontend-production-f45a3.up.railway.app" class="work-card work-card-featured reveal" target="_blank" rel="noopener">
-            <div class="work-card-top">
-              <span class="work-number">02</span>
-              <span class="work-badge-live">Live</span>
-              <span class="work-card-arrow">→</span>
-            </div>
-            <h3>EconSight — Canadian Economic Intelligence Platform</h3>
-            <p>Ingests 9 macro indicators from Statistics Canada and the Bank of Canada into a PostgreSQL medallion warehouse, runs VAR/XGBoost forecasting with Monte Carlo scenario bands, and serves results through a FastAPI + React dashboard with a composite health score, natural language Q&amp;A (RAG), and one-click PDF report generation.</p>
-            <div class="work-tags">
-              <span>Python</span><span>FastAPI</span><span>XGBoost</span><span>PostgreSQL</span><span>React</span><span>RAG</span>
-            </div>
-          </a>
-
-          <a href="https://web-production-ccca1.up.railway.app/" class="work-card work-card-featured reveal" target="_blank" rel="noopener">
-            <div class="work-card-top">
-              <span class="work-number">03</span>
-              <span class="work-badge-live">Live</span>
-              <span class="work-card-arrow">→</span>
-            </div>
-            <h3>Personalized Newspaper — AI-Curated Daily Broadsheet</h3>
-            <p>A personal front page, rebuilt on a schedule. Polls Finnhub, RSS feeds, and Hacker News, scores every article for relevance and clickbait with Claude, and renders a dense three-column broadsheet from Postgres — deployed as a single service on Railway.</p>
-            <div class="work-tags">
-              <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Drizzle</span><span>Claude API</span><span>Tailwind</span>
-            </div>
-          </a>
-
-          <a href="https://auditap.it.com/#how-it-works" class="work-card work-card-featured reveal" target="_blank" rel="noopener">
-            <div class="work-card-top">
-              <span class="work-number">04</span>
-              <span class="work-badge-live">Live</span>
-              <span class="work-card-arrow">→</span>
-            </div>
-            <h3>AI-Powered Financial Risk &amp; Anomaly Detector (AuditAP)</h3>
-            <p>Automated Accounts Payable monitoring to detect duplicate invoices, vendor price creeping, and zombie subscriptions. QuickBooks integration, 90-day rolling baselines, anomaly flagging with LLMs.</p>
-            <div class="work-tags">
-              <span>Python</span><span>SQL</span><span>PostgreSQL</span><span>LLMs</span>
-            </div>
-          </a>
-
           <a href="https://github.com/kbaran011/Quantitative_Portfolio_Optimization_-_Risk-Engine" class="work-card reveal" target="_blank" rel="noopener">
             <div class="work-card-top">
               <span class="work-number">05</span>
@@ -375,7 +498,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Kemal Baran Dursun. Built with care.</p>
+      <p>© <span id="year"></span> Baran Dursun</p>
       <div class="footer-links">
         <a href="https://github.com/kbaran011" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/kemalbarandursun/" target="_blank" rel="noopener">LinkedIn</a>
