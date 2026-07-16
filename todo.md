@@ -48,9 +48,12 @@ portfolio-100: 997573e (Task A) → 7721999 (A fixes) → ebc9b31 (Task B) → e
 
 ## Remaining after T6
 
-- T8 final re-grade (fresh reviewer, 10-part rubric)
-- Merge portfolio-100 → main + push (USER APPROVAL REQUIRED — push deploys to kemalbarandursun.com)
-- User manual steps: apply github-updates/ after review (controller can run the gh commands on approval), pin 6 repos in GitHub UI, consider custom domains for the 2 Railway app URLs (EconSight, Newspaper)
+- [x] Merged portfolio-100 → main (e22da1c), pushed 2026-07-16; LIVE + verified at kemalbarandursun.com (title/og-image/resume/sitemap all 200)
+- [x] github-updates APPLIED 2026-07-16 (user approved after review): 8 repo descriptions+topics+homepages set; kbaran011/kbaran011 profile README live; 5 upgraded READMEs pushed (screenshots verified 200 on EconSight/newspaper/auditap)
+- [ ] USER: run `! gh auth refresh -h github.com -s user` then Claude runs the bio/name PATCH (token lacked `user` scope): gh api -X PATCH /user -f name='Baran Dursun' -f bio="Building data-heavy products: FragMance (App Store), EconSight, AuditAP. CS & Econ @ McGill '26." -f blog='https://kemalbarandursun.com'
+- [ ] USER: pin 6 repos at github.com/kbaran011 → Customize your pins (order in github-updates/00-APPLY.md Step 5: fragmance-showcase, EconSight, personalized-newspaper, auditap, Quant Engine, Own-Website)
+- [ ] USER: custom domains for EconSight + Newspaper in Railway dashboard (e.g. econsight./news. subdomains of kemalbarandursun.com); then Claude updates site links + profile README
+- [ ] Later, if real usage metrics ever exist: add to case studies + resume (cats 2/3); engineering internship is the structural cat-4 fix
 
 ## Key facts for any future session
 
