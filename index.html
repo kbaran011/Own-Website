@@ -269,7 +269,7 @@
             </div>
             <div class="case-body">
               <h3>FragMance</h3>
-              <p class="case-tagline">A mobile fragrance discovery and collection platform, live on the App Store.</p>
+              <p class="case-tagline">A full-stack social iOS app for fragrance discovery and collection — built solo, live on the App Store.</p>
               <div class="case-sections">
                 <div class="case-block">
                   <span class="case-label">Problem</span>
@@ -277,15 +277,15 @@
                 </div>
                 <div class="case-block">
                   <span class="case-label">Build</span>
-                  <p>A React Native + Expo app on a Node.js / PostgreSQL backend, built over a database of 70,000+ fragrances with full note pyramids. The hardest piece was a 4-stage barcode scanning pipeline that reliably resolves a physical bottle to the right entry.</p>
+                  <p>Solo end to end: a 58-endpoint Node.js/Express REST backend with Redis caching behind a React Native (Expo) client — ~18K lines of TypeScript. Barcode scanning and free-text lookup run on PostgreSQL trigram (pg_trgm) search with a custom confidence-ranking layer over 63,751 fragrances across 1,772 brands and 1,861 scent notes; a content-based recommender ranks by IDF-weighted scent-note overlap scaled by brand-tier affinity.</p>
                 </div>
                 <div class="case-block">
                   <span class="case-label">Status</span>
-                  <p>Live on the App Store, with a digital wardrobe, Scent-of-the-Day logging, and a social feed with friends and streaks. Also ships B2B analytics endpoints designed for fragrance houses.</p>
+                  <p>Live on the App Store, shipped through CI with 528 automated tests and a schema-drift guard. A self-initiated security audit of the app in production uncovered a PII exposure in its auto-generated REST API — fixed at the Postgres grant/RLS layer with a regression test. Also ships B2B analytics endpoints designed for fragrance houses.</p>
                 </div>
               </div>
               <div class="work-tags">
-                <span>React Native</span><span>Expo</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span>
+                <span>React Native</span><span>Expo</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Redis</span>
               </div>
               <div class="case-links">
                 <a href="https://apps.apple.com/app/id6775969323" class="case-link case-link-primary" target="_blank" rel="noopener">View on App Store →</a>
