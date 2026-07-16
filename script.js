@@ -5,24 +5,6 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // ─── Preloader ────────────────────────────────────────────────────────────────
-  var preloader = document.getElementById("preloader");
-  var fill = document.getElementById("preloaderFill");
-  var progress = 0;
-  var fillInterval = setInterval(function () {
-    progress += Math.random() * 18;
-    if (progress >= 90) progress = 90;
-    if (fill) fill.style.width = progress + "%";
-  }, 70);
-
-  window.addEventListener("load", function () {
-    clearInterval(fillInterval);
-    if (fill) fill.style.width = "100%";
-    setTimeout(function () {
-      if (preloader) preloader.classList.add("hidden");
-    }, 380);
-  });
-
   // ─── Scroll progress bar ──────────────────────────────────────────────────────
   var scrollBar = document.getElementById("scrollProgress");
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -90,56 +72,39 @@
     revealObserver.observe(el);
   });
 
-  // ─── Typing effect ────────────────────────────────────────────────────────────
-  var typedEl = document.getElementById("typed");
-  var phrases = [
-    "decisions.",
-    "forecasts.",
-    "products.",
-    "strategy."
-  ];
-  var phraseIdx = 0, charIdx = 0, deleting = false, typeDelay = 110;
-
-  function typeLoop() {
-    var current = phrases[phraseIdx];
-    if (deleting) {
-      if (typedEl) typedEl.textContent = current.substring(0, charIdx - 1);
-      charIdx--;
-      typeDelay = 48;
-    } else {
-      if (typedEl) typedEl.textContent = current.substring(0, charIdx + 1);
-      charIdx++;
-      typeDelay = 110;
-    }
-    if (!deleting && charIdx === current.length) {
-      deleting = true; typeDelay = 1700;
-    } else if (deleting && charIdx === 0) {
-      deleting = false;
-      phraseIdx = (phraseIdx + 1) % phrases.length;
-      typeDelay = 480;
-    }
-    setTimeout(typeLoop, typeDelay);
-  }
-  // Start typing after preloader would have cleared
-  setTimeout(typeLoop, 900);
-
   // ─── Active nav link ──────────────────────────────────────────────────────────
   var sections = document.querySelectorAll("main section[id]");
   var navLinks = document.querySelectorAll(".nav-link");
+  var sectionBounds = [];
+
+  function measureSections() {
+    sectionBounds = [];
+    sections.forEach(function (section) {
+      var top = section.offsetTop - 100;
+      sectionBounds.push({
+        id: section.id,
+        top: top,
+        bottom: top + section.offsetHeight
+      });
+    });
+  }
 
   function updateActiveNav() {
     var scrollY = window.scrollY;
-    sections.forEach(function (section) {
-      var top = section.offsetTop - 100;
-      var bottom = top + section.offsetHeight;
-      if (scrollY >= top && scrollY < bottom) {
+    sectionBounds.forEach(function (bounds) {
+      if (scrollY >= bounds.top && scrollY < bounds.bottom) {
         navLinks.forEach(function (link) {
-          var isMatch = link.getAttribute("href") === "#" + section.id;
+          var isMatch = link.getAttribute("href") === "#" + bounds.id;
           link.classList.toggle("active", isMatch);
         });
       }
     });
   }
+
+  measureSections();
+  window.addEventListener("load", measureSections);
+  window.addEventListener("resize", measureSections, { passive: true });
+  window.addEventListener("orientationchange", measureSections, { passive: true });
 
   // ─── Mobile nav ───────────────────────────────────────────────────────────────
   var nav = document.querySelector(".nav");
@@ -158,53 +123,6 @@
         toggle.classList.remove("is-open");
       });
     });
-  }
-
-  // ─── Custom cursor ────────────────────────────────────────────────────────────
-  var cursor = document.getElementById("cursor");
-  var follower = document.getElementById("cursorFollower");
-
-  if (window.matchMedia("(pointer: fine)").matches) {
-    document.body.classList.add("has-custom-cursor");
-    var mx = 0, my = 0, fx = 0, fy = 0;
-
-    document.addEventListener("mousemove", function (e) {
-      mx = e.clientX; my = e.clientY;
-      if (cursor) {
-        cursor.style.left = mx + "px";
-        cursor.style.top  = my + "px";
-      }
-    });
-
-    (function animateFollower() {
-      fx += (mx - fx) * 0.11;
-      fy += (my - fy) * 0.11;
-      if (follower) {
-        follower.style.left = fx + "px";
-        follower.style.top  = fy + "px";
-      }
-      requestAnimationFrame(animateFollower);
-    })();
-
-    document.querySelectorAll("a, button").forEach(function (el) {
-      el.addEventListener("mouseenter", function () {
-        if (cursor) cursor.style.transform = "translate(-50%, -50%) scale(2.2)";
-        if (follower) {
-          follower.style.width  = "52px";
-          follower.style.height = "52px";
-        }
-      });
-      el.addEventListener("mouseleave", function () {
-        if (cursor) cursor.style.transform = "translate(-50%, -50%) scale(1)";
-        if (follower) {
-          follower.style.width  = "34px";
-          follower.style.height = "34px";
-        }
-      });
-    });
-  } else {
-    if (cursor)   cursor.style.display   = "none";
-    if (follower) follower.style.display = "none";
   }
 
 })();

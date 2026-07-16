@@ -4,16 +4,13 @@ A modern, fully static personal portfolio site. No frameworks, no build step —
 
 **Live features:**
 - Dark / light mode (persisted via `localStorage`)
-- Typing animation cycling through roles in the hero
-- Scroll-triggered reveal animations on every section
-- Animated stat counters (projects, internships, certifications)
-- Custom cursor with trailing follower (desktop only)
-- Preloader with initials + progress bar
+- Scroll-triggered reveal animations, with staggered delays on cards and timeline items
 - Scroll progress bar at the top of the page
-- Active nav link tracking based on scroll position
+- Active nav link tracking based on scroll position (bounds cached, recomputed on resize)
 - Vertical timeline for experience
-- Project card grid with hover effects
+- Case-study cards with screenshots, plus a compact project card grid
 - Responsive mobile nav with hamburger → X animation
+- SEO layer: canonical URL, Open Graph + Twitter cards, JSON-LD `Person` schema, `sitemap.xml`, `robots.txt`
 
 ---
 
@@ -43,12 +40,16 @@ python3 -m http.server 8000
 ## File structure
 
 ```
-├── index.html      # All content and markup
-├── styles.css      # Design system, layout, animations, dark mode
-├── script.js       # Preloader, typing effect, counters, cursor, scroll logic
-├── resume.pdf      # CV — linked from the contact section
+├── index.html         # All content and markup (incl. SEO head + JSON-LD)
+├── styles.css         # Design system, layout, animations, dark mode
+├── script.js          # Theme toggle, scroll progress, reveals, active nav, mobile nav
+├── resume.pdf         # CV — linked from the contact section
+├── sitemap.xml        # Single-URL sitemap
+├── robots.txt         # Allow-all + sitemap reference
 ├── assets/
-│   └── photo.png   # Profile photo (used in hero)
+│   ├── photo.jpg      # Profile photo (used in hero)
+│   ├── og-image.png   # 1200×630 social share image
+│   └── shots/         # Case-study screenshots
 └── README.md
 ```
 
@@ -68,18 +69,6 @@ All design tokens are in `styles.css` under `:root`. The main accent color is gr
 }
 ```
 
-### Typing phrases
-Edit the `phrases` array in `script.js`:
-
-```js
-var phrases = [
-  "decisions.",
-  "forecasts.",
-  "products.",
-  "strategy."
-];
-```
-
 ### Content
 All text content is in `index.html`. Sections in order: Hero → About → Experience → Projects → Contact. Each section is a `<section>` tag with a matching `id`.
 
@@ -87,13 +76,13 @@ All text content is in `index.html`. Sections in order: Hero → About → Exper
 Replace `resume.pdf` in the root folder. The download button in the contact section points to it automatically.
 
 ### Profile photo
-Replace `assets/photo.png`. The image is displayed at 300 × 300 px in a circular crop — square source images work best.
+Replace `assets/photo.jpg`. The image is displayed at 300 × 300 px in a circular crop — square source images work best. Keep it small (resize to ~640 px, JPEG quality ~82).
 
 ---
 
 ## Deployment
 
-Deployed on [Railway](https://railway.com). The service is connected to this GitHub repo — every push to `main` triggers a redeploy.
+Deployed on [Railway](https://railway.com) and live at **[kemalbarandursun.com](https://kemalbarandursun.com/)** (with `www` as an alias). The service is connected to this GitHub repo — every push to `main` triggers a redeploy.
 
 `railway.json` selects the Railpack builder, which detects the root `index.html` and serves the site as static files (via Caddy). No build command needed.
 
@@ -116,7 +105,7 @@ Custom domains are managed in the Railway dashboard under **Service → Settings
 
 ## Browser support
 
-Works in all modern browsers (Chrome, Firefox, Safari, Edge). The custom cursor is automatically hidden on touch/pointer-coarse devices.
+Works in all modern browsers (Chrome, Firefox, Safari, Edge).
 
 ---
 
