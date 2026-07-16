@@ -1,0 +1,256 @@
+<meta charset="utf-8">
+<title>Kemal Baran Dursun — Resume</title>
+<style>
+  :root {
+    --ink: #14161a;
+    --muted: #4a4f57;
+    --accent: rgb(22, 125, 19);
+    --rule: rgba(20, 22, 26, 0.18);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: var(--ink);
+  }
+
+  body {
+    font-family: "Inter", "Helvetica Neue", Arial, "Segoe UI", system-ui, sans-serif;
+    font-size: 10pt;
+    line-height: 1.13;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 7.5in;
+    margin: 0 auto;
+    padding: 0.5in 0.5in 0.42in 0.5in;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+
+  /* ---------- Header ---------- */
+  header { margin-bottom: 3px; }
+
+  .name {
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.0;
+    margin: 0 0 4px 0;
+  }
+
+  .contact {
+    font-size: 9pt;
+    color: var(--muted);
+    line-height: 1.35;
+  }
+  .contact .sep { color: var(--rule); padding: 0 5px; }
+
+  /* ---------- Sections ---------- */
+  section { margin-top: 4px; }
+
+  h2 {
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 4px 0;
+    padding-bottom: 2px;
+    border-bottom: 1.4px solid var(--accent);
+  }
+
+  .entry { margin-bottom: 3px; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .entry-title {
+    font-size: 10.6pt;
+    font-weight: 700;
+    margin: 0;
+  }
+  .entry-title .live {
+    font-weight: 500;
+    color: var(--accent);
+    font-size: 9pt;
+  }
+
+  .entry-meta {
+    font-size: 9pt;
+    color: var(--muted);
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  .entry-sub {
+    font-size: 9.2pt;
+    color: var(--muted);
+    margin: 1px 0 0 0;
+  }
+  .stack {
+    font-size: 8.8pt;
+    color: var(--muted);
+    font-style: italic;
+    margin: 2px 0 2px 0;
+  }
+
+  ul {
+    margin: 2px 0 0 0;
+    padding-left: 16px;
+  }
+  li {
+    margin-bottom: 0.5px;
+    padding-left: 2px;
+  }
+
+  .info-line { margin-bottom: 2px; }
+  .info-line:last-child { margin-bottom: 0; }
+  .info-line b { font-weight: 700; }
+
+  @media print {
+    @page { size: Letter; margin: 0; }
+    .page { padding: 0.5in 0.5in 0.42in 0.5in; max-width: none; }
+    a { color: var(--accent); }
+  }
+</style>
+
+<div class="page">
+
+  <header>
+    <h1 class="name">Kemal Baran Dursun</h1>
+    <div class="contact">
+      Montreal, QC
+      <span class="sep">·</span><a href="mailto:kemalbarandursun@gmail.com">kemalbarandursun@gmail.com</a>
+      <span class="sep">·</span>438-470-4570
+      <br>
+      <a href="https://www.linkedin.com/in/kemalbarandursun">linkedin.com/in/kemalbarandursun</a>
+      <span class="sep">·</span><a href="https://github.com/kbaran011">github.com/kbaran011</a>
+      <span class="sep">·</span><a href="https://kemalbarandursun.com">kemalbarandursun.com</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <p class="entry-title">McGill University</p>
+        <span class="entry-meta">Montreal, QC</span>
+      </div>
+      <p class="entry-sub">Bachelor of Arts, Computer Science &amp; Economics &nbsp;·&nbsp; Expected December 2026</p>
+      <p class="entry-sub">Relevant coursework: Econometrics, Probability, Computation, Data Structures, Economic Statistics, Financial Instruments and Institutions.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <p class="entry-title"><a href="https://fragmance.app">FragMance</a> <span class="live">(live)</span></p>
+        <span class="entry-meta">iOS App Store</span>
+      </div>
+      <p class="stack">React Native · Expo · TypeScript · Node.js · PostgreSQL</p>
+      <ul>
+        <li>Built and shipped a fragrance discovery and collection app with a 4-stage barcode scanning pipeline over a database of 70,000+ fragrances with full note breakdowns.</li>
+        <li>Delivered a digital wardrobe, scent-of-the-day logging, and social feed, plus B2B analytics endpoints designed for fragrance houses.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <p class="entry-title"><a href="https://frontend-production-f45a3.up.railway.app">EconSight</a> — Canadian Economic Intelligence Platform <span class="live">(live)</span></p>
+      </div>
+      <p class="stack">Python · FastAPI · XGBoost · PostgreSQL · React</p>
+      <ul>
+        <li>Ingested 9 macro indicators from Statistics Canada and the Bank of Canada into a PostgreSQL medallion warehouse, driving VAR and XGBoost forecasts with Monte Carlo scenario bands.</li>
+        <li>Surfaced a composite economic health score, RAG natural-language Q&amp;A, and one-click PDF reports.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <p class="entry-title"><a href="https://web-production-ccca1.up.railway.app">Personalized Newspaper</a> — AI-Curated Daily Broadsheet <span class="live">(live)</span></p>
+      </div>
+      <p class="stack">Next.js · TypeScript · PostgreSQL · Drizzle · Claude API</p>
+      <ul>
+        <li>Built a scheduled pipeline polling Finnhub, RSS feeds, and Hacker News, scoring every article for relevance and clickbait with the Claude API.</li>
+        <li>Rendered a three-column broadsheet, deployed as a single Railway service.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <p class="entry-title"><a href="https://auditap.it.com">AuditAP</a> — AP Risk &amp; Anomaly Detection <span class="live">(live)</span></p>
+      </div>
+      <p class="stack">Python · SQL · PostgreSQL · LLMs</p>
+      <ul>
+        <li>Integrated with QuickBooks and built 90-day rolling statistical baselines to flag duplicate invoices, vendor price creep, and zombie subscriptions.</li>
+        <li>Added an LLM audit of invoice line-item descriptions to catch anomalies rule-based checks miss.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <p class="entry-title">Quantitative Portfolio Optimization &amp; Risk Engine</p>
+      </div>
+      <p class="stack">Python · Pandas · NumPy</p>
+      <ul>
+        <li>Computed a Modern Portfolio Theory max-Sharpe portfolio via 10,000+ Monte Carlo simulations, using Cholesky decomposition with covariance regularization for multivariate return simulation.</li>
+        <li>Reported Parametric VaR and Expected Shortfall at the 95% and 99% confidence levels.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <p class="entry-title">Duronm Textile Company <span class="live">— Invoicing &amp; Collections Intern</span></p>
+        <span class="entry-meta">Izmir, Turkey · Jun–Aug 2023</span>
+      </div>
+      <ul>
+        <li>Analyzed 200+ accounts-receivable transactions for payment trends, delays, and cash-flow risk.</li>
+        <li>Built weekly Excel reports tracking overdue balances, collection performance, and working-capital indicators for management.</li>
+        <li>Reconciled invoicing and payment records to improve data accuracy and flagged high-risk accounts for collection prioritization.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <p class="entry-title">Advanced Information Modeling Inc <span class="live">— IT Intern</span></p>
+        <span class="entry-meta">St. Petersburg, FL (Remote) · Jun–Aug 2024</span>
+      </div>
+      <ul>
+        <li>Monitored system availability and performance logs, documenting recurring technical issues for the team.</li>
+        <li>Updated internal documentation and standard operating procedures to keep support references current.</li>
+        <li>Recommended process improvements to streamline recurring support workflows.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Additional Information</h2>
+    <p class="info-line"><b>Certifications:</b> FMVA (Financial Modeling &amp; Valuation Analyst); CFA Level 1 Candidate</p>
+    <p class="info-line"><b>Skills:</b> Python, TypeScript, SQL (PostgreSQL), React / React Native, Node.js, FastAPI, Next.js, Pandas / NumPy, Power BI, Excel; Risk metrics (VaR, Expected Shortfall), Statistical analysis</p>
+    <p class="info-line"><b>Languages:</b> English (native), Turkish (native), French (intermediate)</p>
+    <p class="info-line"><b>Activities:</b> McGill Consulting Association; Economics Student Association</p>
+  </section>
+
+</div>
