@@ -101,10 +101,15 @@
     });
   }
 
+  function remeasureAndUpdate() {
+    measureSections();
+    updateActiveNav();
+  }
+
   measureSections();
-  window.addEventListener("load", measureSections);
-  window.addEventListener("resize", measureSections, { passive: true });
-  window.addEventListener("orientationchange", measureSections, { passive: true });
+  window.addEventListener("load", remeasureAndUpdate);
+  window.addEventListener("resize", remeasureAndUpdate);
+  window.addEventListener("orientationchange", remeasureAndUpdate);
 
   // ─── Mobile nav ───────────────────────────────────────────────────────────────
   var nav = document.querySelector(".nav");

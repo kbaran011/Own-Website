@@ -1,4 +1,4 @@
-# Kemal Baran Dursun — Personal Portfolio
+# Baran Dursun — Personal Portfolio
 
 A modern, fully static personal portfolio site. No frameworks, no build step — pure HTML, CSS, and vanilla JS.
 
