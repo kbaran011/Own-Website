@@ -159,14 +159,14 @@
 
     <div class="entry">
       <div class="entry-head">
-        <p class="entry-title"><a href="https://fragmance.app">FragMance</a> <span class="live">(live)</span></p>
-        <span class="entry-meta">iOS App Store</span>
+        <p class="entry-title"><a href="https://apps.apple.com/app/id6775969323">FragMance — Full-Stack Social iOS App</a> <span class="live">· <a href="https://github.com/kbaran011/fragmance-showcase">GitHub</a></span></p>
+        <span class="entry-meta">Sole Engineer · Live on the App Store</span>
       </div>
-      <p class="stack">React Native · Expo · TypeScript · Node.js · PostgreSQL</p>
+      <p class="stack" style="font-size:8.4pt;">React Native (Expo) · TypeScript · Node.js/Express · PostgreSQL (Prisma) · Redis · Supabase · GitHub Actions · EAS · Sentry</p>
       <ul>
-        <li>Shipped a fragrance discovery and collection app to the iOS App Store, built end to end from the React Native client to the Node.js/PostgreSQL backend.</li>
-        <li>Engineered a 4-stage barcode scanning pipeline that resolves scans against a database of 70,000+ fragrances with full note-pyramid breakdowns.</li>
-        <li>Built the consumer product surface — digital wardrobe, scent-of-the-day logging, and a social feed with friends and streak tracking — plus B2B analytics endpoints designed for fragrance houses.</li>
+        <li>Solo-designed, built, and shipped a production social iOS app for fragrance discovery — owning UX, a 58-endpoint REST backend, the React Native client, CI/CD, and security (~18K lines of TypeScript).</li>
+        <li>Engineered OCR- and typo-resilient search over a 63,751-fragrance catalog: PostgreSQL trigram (pg_trgm) indexes plus a confidence-ranking layer (word similarity, token recall, edit distance, accent folding) power barcode scanning and free-text lookup.</li>
+        <li>Discovered and remediated a live PII exposure in a self-initiated security audit — the database's auto-generated REST API served every user's email and push token to anyone with the app's public client key; locked it down at the Postgres grant/RLS layer and added a regression test.</li>
       </ul>
     </div>
 
