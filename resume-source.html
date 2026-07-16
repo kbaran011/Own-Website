@@ -2,10 +2,9 @@
 <title>Kemal Baran Dursun — Resume</title>
 <style>
   :root {
-    --ink: #14161a;
-    --muted: #4a4f57;
-    --accent: rgb(22, 125, 19);
-    --rule: rgba(20, 22, 26, 0.18);
+    --ink: #1a1a1a;
+    --muted: #4d4d4d;
+    --rule: rgba(0, 0, 0, 0.18);
   }
 
   * { box-sizing: border-box; }
@@ -31,7 +30,7 @@
   }
 
   a {
-    color: var(--accent);
+    color: var(--ink);
     text-decoration: none;
   }
   a:hover { text-decoration: underline; }
@@ -65,7 +64,7 @@
     color: var(--ink);
     margin: 0 0 4px 0;
     padding-bottom: 2px;
-    border-bottom: 1.4px solid var(--accent);
+    border-bottom: 1.2px solid var(--ink);
   }
 
   .entry { margin-bottom: 3px; }
@@ -85,7 +84,7 @@
   }
   .entry-title .live {
     font-weight: 500;
-    color: var(--accent);
+    color: var(--muted);
     font-size: 9pt;
   }
 
@@ -124,7 +123,7 @@
   @media print {
     @page { size: Letter; margin: 0; }
     .page { padding: 0.5in 0.5in 0.42in 0.5in; max-width: none; }
-    a { color: var(--accent); }
+    a { color: var(--ink); }
   }
 </style>
 
@@ -165,8 +164,9 @@
       </div>
       <p class="stack">React Native · Expo · TypeScript · Node.js · PostgreSQL</p>
       <ul>
-        <li>Built and shipped a fragrance discovery and collection app with a 4-stage barcode scanning pipeline over a database of 70,000+ fragrances with full note breakdowns.</li>
-        <li>Delivered a digital wardrobe, scent-of-the-day logging, and social feed, plus B2B analytics endpoints designed for fragrance houses.</li>
+        <li>Shipped a fragrance discovery and collection app to the iOS App Store, built end to end from the React Native client to the Node.js/PostgreSQL backend.</li>
+        <li>Engineered a 4-stage barcode scanning pipeline that resolves scans against a database of 70,000+ fragrances with full note-pyramid breakdowns.</li>
+        <li>Built the consumer product surface — digital wardrobe, scent-of-the-day logging, and a social feed with friends and streak tracking — plus B2B analytics endpoints designed for fragrance houses.</li>
       </ul>
     </div>
 
@@ -200,17 +200,6 @@
       <ul>
         <li>Integrated with QuickBooks and built 90-day rolling statistical baselines to flag duplicate invoices, vendor price creep, and zombie subscriptions.</li>
         <li>Added an LLM audit of invoice line-item descriptions to catch anomalies rule-based checks miss.</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <p class="entry-title">Quantitative Portfolio Optimization &amp; Risk Engine</p>
-      </div>
-      <p class="stack">Python · Pandas · NumPy</p>
-      <ul>
-        <li>Computed a Modern Portfolio Theory max-Sharpe portfolio via 10,000+ Monte Carlo simulations, using Cholesky decomposition with covariance regularization for multivariate return simulation.</li>
-        <li>Reported Parametric VaR and Expected Shortfall at the 95% and 99% confidence levels.</li>
       </ul>
     </div>
 
