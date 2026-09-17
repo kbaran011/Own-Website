@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Baran Dursun — Software engineer who ships data-heavy products with a finance edge. McGill CS & Economics '26. An App Store app and three live data products. Open to internships and new grad roles.">
+  <meta name="description" content="Baran Dursun — Software engineer who ships data-heavy products with a finance edge. McGill CS & Economics '26. An App Store app and four live data products. Open to internships and new grad roles.">
   <link rel="canonical" href="https://kemalbarandursun.com/">
   <title>Baran Dursun — Software Engineer</title>
   <script>
@@ -18,7 +18,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Baran Dursun — Software Engineer">
-  <meta property="og:description" content="Software engineer who ships data-heavy products with a finance edge. McGill CS & Economics '26 — an App Store app and three live data products.">
+  <meta property="og:description" content="Software engineer who ships data-heavy products with a finance edge. McGill CS & Economics '26 — an App Store app and four live data products.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kemalbarandursun.com/">
   <meta property="og:site_name" content="Baran Dursun">
@@ -30,7 +30,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Baran Dursun — Software Engineer">
-  <meta name="twitter:description" content="Software engineer who ships data-heavy products with a finance edge. McGill CS & Economics '26 — an App Store app and three live data products.">
+  <meta name="twitter:description" content="Software engineer who ships data-heavy products with a finance edge. McGill CS & Economics '26 — an App Store app and four live data products.">
   <meta name="twitter:image" content="https://kemalbarandursun.com/assets/og-image.png">
   <meta name="twitter:image:alt" content="Baran Dursun — Software engineer who builds and ships data-heavy products">
 
@@ -107,7 +107,7 @@
             I build and ship <span class="highlight">data-heavy products</span>.
           </h1>
           <p class="hero-desc reveal">
-            McGill CS &amp; Economics '26. I ship full-stack products end to end — an App Store app and three live data platforms — with a finance edge (FMVA, CFA Level 1 candidate).
+            McGill CS &amp; Economics '26. I ship full-stack products end to end — an App Store app and four live data platforms — with a finance edge (FMVA, CFA Level 1 candidate).
           </p>
           <div class="hero-cta reveal">
             <a href="#work" class="btn btn-primary">
@@ -143,7 +143,7 @@
         <div class="about-grid">
           <div class="about-content">
             <p class="about-lead reveal">
-              I'm a software engineer in Montreal studying CS &amp; Economics at McGill (graduating Dec 2026). I build full-stack, data-heavy products and take them all the way to production — an iOS app live on the App Store and three deployed data platforms, from ingestion pipelines to the interfaces on top of them.
+              I'm a software engineer in Montreal studying CS &amp; Economics at McGill (graduating Dec 2026). I build full-stack, data-heavy products and take them all the way to production — an iOS app live on the App Store and four deployed data platforms, from ingestion pipelines to the interfaces on top of them.
             </p>
             <p class="reveal">
               My edge is the economics half of the degree: I'm comfortable with the finance and quantitative modeling behind the data, not just the plumbing. I'm an FMVA and a CFA Level 1 candidate, and my coursework spans Econometrics, Probability, Data Structures, and Financial Instruments &amp; Institutions. Earlier, I interned in invoicing &amp; collections at Duronm Textile and IT operations at Advanced Information Modeling.
@@ -296,9 +296,41 @@
 
           <article class="case-card reveal">
             <div class="case-shot">
-              <img src="assets/shots/econsight.jpg" loading="lazy" width="1200" height="750" alt="EconSight dashboard showing Canadian macro indicators and forecasts">
+              <img src="assets/shots/recap.jpg" loading="lazy" width="1200" height="750" alt="Recap Engine showing a spoiler-bounded Chernobyl recap up to episode S1E3">
               <span class="case-badge">Live</span>
               <span class="case-number">02</span>
+            </div>
+            <div class="case-body">
+              <h3>Recap Engine</h3>
+              <p class="case-tagline">Spoiler-free TV recaps bounded to exactly where you are in a show — with a companion browser extension that knows which episode you're on.</p>
+              <div class="case-sections">
+                <div class="case-block">
+                  <span class="case-label">Problem</span>
+                  <p>Coming back to a series after a break, you want the story so far — but every recap, wiki, and search result is a minefield of spoilers for episodes you haven't reached yet.</p>
+                </div>
+                <div class="case-block">
+                  <span class="case-label">Build</span>
+                  <p>TypeScript end to end: a Hono + PostgreSQL (drizzle-orm) API behind a React 19 web app and a Chrome MV3 extension — roughly 6,600 lines with 184 automated tests. Plot events are extracted on demand from episode synopses with the Claude API and streamed back as catch-up recaps (three lengths), single-episode summaries, and spoiler-bounded character cards. The extension's content scripts read your current episode straight from the Netflix, Prime Video, Disney+, and Max players.</p>
+                </div>
+                <div class="case-block">
+                  <span class="case-label">Status</span>
+                  <p>Live at recapengine.com behind Google sign-in, deployed on Railway. The interesting constraint: spoiler-safety is a database invariant, not a filter bolted on afterward. Every episode carries a contiguous order number, and a single query — the only path from stored events into any prompt — clips everything past your position, so leaking a future event is structurally impossible. Episodes ahead of you are never even read until a later boundary needs them.</p>
+                </div>
+              </div>
+              <div class="work-tags">
+                <span>TypeScript</span><span>React</span><span>Hono</span><span>PostgreSQL</span><span>Chrome MV3</span><span>Claude API</span>
+              </div>
+              <div class="case-links">
+                <a href="https://recapengine.com" class="case-link case-link-primary" target="_blank" rel="noopener">Open live app →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-shot">
+              <img src="assets/shots/econsight.jpg" loading="lazy" width="1200" height="750" alt="EconSight dashboard showing Canadian macro indicators and forecasts">
+              <span class="case-badge">Live</span>
+              <span class="case-number">03</span>
             </div>
             <div class="case-body">
               <h3>EconSight</h3>
@@ -331,7 +363,7 @@
             <div class="case-shot">
               <img src="assets/shots/newspaper.jpg" loading="lazy" width="1100" height="688" alt="Personalized Newspaper rendered as a dense three-column broadsheet">
               <span class="case-badge">Live</span>
-              <span class="case-number">03</span>
+              <span class="case-number">04</span>
             </div>
             <div class="case-body">
               <h3>Personalized Newspaper</h3>
@@ -364,7 +396,7 @@
             <div class="case-shot">
               <img src="assets/shots/auditap.jpg" loading="lazy" width="1200" height="750" alt="AuditAP accounts-payable monitoring dashboard flagging invoice anomalies">
               <span class="case-badge">Live</span>
-              <span class="case-number">04</span>
+              <span class="case-number">05</span>
             </div>
             <div class="case-body">
               <h3>AuditAP</h3>
@@ -397,7 +429,7 @@
         <div class="work-grid">
           <a href="https://github.com/kbaran011/Quantitative_Portfolio_Optimization_-_Risk-Engine" class="work-card reveal" target="_blank" rel="noopener">
             <div class="work-card-top">
-              <span class="work-number">05</span>
+              <span class="work-number">06</span>
               <span class="work-card-arrow">→</span>
             </div>
             <h3>Quantitative Portfolio Optimization &amp; Risk Engine</h3>
@@ -409,7 +441,7 @@
 
           <a href="https://github.com/kbaran011/Global-Layoffs-Data-Cleaning-Exploratory-Analysis" class="work-card reveal" target="_blank" rel="noopener">
             <div class="work-card-top">
-              <span class="work-number">06</span>
+              <span class="work-number">07</span>
               <span class="work-card-arrow">→</span>
             </div>
             <h3>Global Layoffs — Data Cleaning &amp; Exploratory Analysis</h3>
@@ -421,7 +453,7 @@
 
           <a href="https://github.com/kbaran011/Expense_Tracker_App" class="work-card reveal" target="_blank" rel="noopener">
             <div class="work-card-top">
-              <span class="work-number">07</span>
+              <span class="work-number">08</span>
               <span class="work-card-arrow">→</span>
             </div>
             <h3>Expense Tracker App</h3>
